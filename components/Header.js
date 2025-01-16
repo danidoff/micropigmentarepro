@@ -20,7 +20,9 @@ export default function Header() {
         <header className={styles.header}>
             <nav className={styles.navbar}>
                 {/* Logo */}
-                <div className={styles.logo}>Micropigmentare Pro</div>
+                <div className={styles.logo}>
+                    <a href="#home" onClick={closeMenu}>Micropigmentare Pro</a>
+                </div>
 
                 {/* Hamburger Menu Button */}
                 <button className={styles.hamburger} onClick={toggleMenu}>
@@ -29,7 +31,7 @@ export default function Header() {
 
                 {/* Navigation Menu */}
                 <ul className={`${styles.navList} ${menuOpen ? styles.navOpen : ""}`}>
-                    <li><a href="#home" onClick={closeMenu}>Acasă</a></li>
+                    {/*<li><a href="#home" onClick={closeMenu}>Acasă</a></li>*/}
                     <li><a href="#about" onClick={closeMenu}>Despre Noi</a></li>
                     <li><a href="#services" onClick={closeMenu}>Servicii</a></li>
                     <li><a href="#portfolio" onClick={closeMenu}>Portofoliu</a></li>

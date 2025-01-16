@@ -64,6 +64,7 @@
 @media (max-width: 900px) {
     .hamburger {
         display: block; /* Show the button */
+        margin-right: 20px;
     }
 
     /* Hide default nav menu */
@@ -81,6 +82,7 @@
         transition: transform 0.3s ease-in-out;
         z-index: 999; /* Ensure it's above all elements */
         display: none; /* Hide the menu initially */
+        margin-right: 20px;
     }
 
     /* When menu is open, show it */

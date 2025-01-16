@@ -3,6 +3,7 @@
 import {motion, useScroll, useSpring, useTransform} from "framer-motion";
 import Image from "next/image";
 import styles from '@/styles/Home.module.css';
+import SectionTitle from "@/components/SectionTitle";
 
 export default function Section({ id, title, content, listItems, backgroundColor, image }) {
     // const { scrollY } = useScroll();
@@ -16,10 +17,8 @@ export default function Section({ id, title, content, listItems, backgroundColor
     return (
         <section id={id} className={styles.section}>
 
-            <motion.div className={styles.titleContainer}>
-                <h1>{title}</h1>
-            </motion.div>
 
+            <SectionTitle title={title} />
             <motion.div style={{y}} className={styles.contentContainer}>
                 <div className={styles.textContainer}>
                     {content && <p>{content}</p>}
