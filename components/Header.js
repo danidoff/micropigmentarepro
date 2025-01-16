@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import styles from '@/styles/Header.module.css';
+import Image from "next/image";
 
 export default function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -21,7 +22,9 @@ export default function Header() {
             <nav className={styles.navbar}>
                 {/* Logo */}
                 <div className={styles.logo}>
-                    <a href="#home" onClick={closeMenu}>Belle Studio!</a>
+                    <a href="#home" onClick={closeMenu}>
+                        <Image src={"/images/logo.png"} alt={"Belle Studio by Cristina Lacau"} width={40} height={40} priority/>
+                    </a>
                 </div>
 
                 {/* Hamburger Menu Button */}

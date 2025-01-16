@@ -32,7 +32,7 @@ export default function Section({ id, title, content, listItems, backgroundColor
                  style={{ backgroundImage: id === "home" && !isMobile ? `url(${image})` : "none" }}>
 
 
-            <SectionTitle title={title} />
+            <SectionTitle title={title} id={id}/>
             <motion.div style={{y}} className={styles.contentContainer}>
                 <div className={styles.textContainer}>
                     {content && <p className={id === "home" ? styles.homeText : ""}>{content}</p>}
@@ -51,7 +51,12 @@ export default function Section({ id, title, content, listItems, backgroundColor
                 </div>
 
                 {/* Render image on the right */}
-                {id !== "home" && !isMobile && image && (
+                {id !== "home" && image && (
+                    <div className={styles.imageContainer}>
+                        <Image src={image} alt={title} width={600} height={400} priority/>
+                    </div>
+                )}
+                {id === "home" && isMobile && image && (
                     <div className={styles.imageContainer}>
                         <Image src={image} alt={title} width={600} height={400} priority/>
                     </div>

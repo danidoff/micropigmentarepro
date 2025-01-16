@@ -1,7 +1,7 @@
 [
   {
     "id": "home",
-    "title": "Belle Studio by Cristina Lacau",
+    "title": "Belle Studio",
     "content": "Transformăm frumusețea naturală într-o artă. Cu experiență și pasiune, oferim servicii profesionale de micropigmentare, laminare, make-up, extensii de gene și cursuri acreditate. Descoperă frumusețea la cel mai înalt nivel!",
     "backgroundColor": "#ff7e5f",
     "image": "/images/home.jpg",
@@ -13,7 +13,7 @@
     "listItems": [
       {
         "title": "Cine suntem?",
-        "items": ["Micropigmentare Pro este un concept creat de Belle Studio by Cristina Lacau, care îmbină experiența, creativitatea și tehnologia modernă pentru a oferi servicii de înfrumusețare premium. Fie că ești în căutarea sprâncenelor perfecte, unui look de machiaj profesionist sau dorești să înveți secretele acestei meserii, suntem aici pentru tine."]
+        "items": ["Micropigmentare Pro este un concept creat de Belle Studio by Cristina Lăcău, care îmbină experiența, creativitatea și tehnologia modernă pentru a oferi servicii de înfrumusețare premium. Fie că ești în căutarea sprâncenelor perfecte, unui look de machiaj profesionist sau dorești să înveți secretele acestei meserii, suntem aici pentru tine."]
       },
       {
         "title": "Misiunea noastră:",
