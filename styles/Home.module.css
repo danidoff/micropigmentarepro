@@ -21,6 +21,18 @@
     scroll-snap-align: start;
 }
 
+/* Full-Screen Background Image for Home Section (Desktop Only) */
+.fullScreenImageSection {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 .content {
     max-width: 800px;
 }
@@ -184,5 +196,38 @@
     .textContainer, .imageContainer {
         flex: none;
         width: 85%;
+    }
+
+    .fullScreenImageSection {
+        background-image: none !important; /* Disable full background on mobile */
+    }
+}
+
+/* Default text styling for other sections */
+/*.defaultText {*/
+/*    font-size: 1.2rem;*/
+/*    line-height: 1.6;*/
+/*    max-width: 800px;*/
+/*}*/
+
+/* Home section text - narrower and aligned to the left */
+.homeText {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 50%; /* Reduce width */
+    text-align: left;
+    margin-left: 10%;
+    background: rgba(0, 0, 0, 0.5); /* Optional dark overlay */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+/* Responsive: Adjust for smaller screens */
+@media (max-width: 900px) {
+    .homeText {
+        max-width: 90%; /* Make it wider on mobile */
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 }

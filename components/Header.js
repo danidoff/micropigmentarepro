@@ -21,7 +21,7 @@ export default function Header() {
             <nav className={styles.navbar}>
                 {/* Logo */}
                 <div className={styles.logo}>
-                    <a href="#home" onClick={closeMenu}>Micropigmentare Pro</a>
+                    <a href="#home" onClick={closeMenu}>Belle Studio!</a>
                 </div>
 
                 {/* Hamburger Menu Button */}

@@ -4,8 +4,9 @@ import {motion, useScroll, useSpring, useTransform} from "framer-motion";
 import Image from "next/image";
 import styles from '@/styles/Home.module.css';
 import SectionTitle from "@/components/SectionTitle";
+import {useEffect, useState} from "react";
 
-export default function Section({ id, title, content, listItems, backgroundColor, image }) {
+export default function Section({ id, title, content, listItems, backgroundColor, backgroundImage, image }) {
     // const { scrollY } = useScroll();
     // const y = useTransform(scrollY, [0, 500], [0, -200]);
 
@@ -13,15 +14,28 @@ export default function Section({ id, title, content, listItems, backgroundColor
     const smoothScroll = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
     const y = useTransform(smoothScroll, [0, 1], ["0%", "2%"]); // Efect de paralax ușor
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia("(max-width: 900px)");
+        setIsMobile(mediaQuery.matches);
+
+        const handleChange = (e) => setIsMobile(e.matches);
+        mediaQuery.addEventListener("change", handleChange);
+
+        return () => mediaQuery.removeEventListener("change", handleChange);
+    }, []);
     
     return (
-        <section id={id} className={styles.section}>
+        <section id={id} className={`${styles.section} ${id === "home" && !isMobile ? styles.fullScreenImageSection : ""}`}
+                 style={{ backgroundImage: id === "home" && !isMobile ? `url(${image})` : "none" }}>
 
 
             <SectionTitle title={title} />
             <motion.div style={{y}} className={styles.contentContainer}>
                 <div className={styles.textContainer}>
-                    {content && <p>{content}</p>}
+                    {content && <p className={id === "home" ? styles.homeText : ""}>{content}</p>}
 
                     {/* Render list items if available */}
                     {listItems && listItems.map((list, index) => (
@@ -37,7 +51,7 @@ export default function Section({ id, title, content, listItems, backgroundColor
                 </div>
 
                 {/* Render image on the right */}
-                {image && (
+                {id !== "home" && !isMobile && image && (
                     <div className={styles.imageContainer}>
                         <Image src={image} alt={title} width={600} height={400} priority/>
                     </div>
