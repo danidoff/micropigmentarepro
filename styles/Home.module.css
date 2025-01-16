@@ -5,6 +5,8 @@
     justify-content: center;
     text-align: center;
     width: 100%;
+    
+    background-color: black;
 }
 
 .section {
@@ -13,8 +15,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: black;
+    color: white;
     padding: 50px 20px;
+    min-height: 100vh;
+    scroll-snap-align: start;
 }
 
 .content {
@@ -78,3 +82,106 @@
     border-radius: 10px;
 }
 
+.listContainer {
+    margin-top: 30px;
+}
+
+.listTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.list {
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 20px; 
+    list-style-type: disc;
+}
+
+.list li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+
+
+/* Section title should be centered and always on top */
+.titleContainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.titleContainer h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.contentContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.textContainer {
+    flex: 1;
+    color: white;
+    text-align: left;
+}
+
+.imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.imageContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.listContainer {
+    margin-top: 20px;
+}
+
+.listTitle {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.list {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.list li {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+@media (max-width: 900px) {
+    .contentContainer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .textContainer, .imageContainer {
+        flex: none;
+        width: 100%;
+    }
+}

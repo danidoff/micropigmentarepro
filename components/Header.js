@@ -1,16 +1,40 @@
-import styles from '@/styles/Home.module.css';
+"use client";
+
+import { useState } from "react";
+import styles from '@/styles/Header.module.css';
 
 export default function Header() {
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    // Toggle menu on button click
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
+    // Close menu when clicking a link
+    const closeMenu = () => {
+        setMenuOpen(false);
+    };
+
     return (
         <header className={styles.header}>
-            <nav>
-                <ul className={styles.navList}>
-                    <li><a href="#home">Acasă</a></li>
-                    <li><a href="#about">Despre Noi</a></li>
-                    <li><a href="#services">Servicii</a></li>
-                    <li><a href="#portfolio">Portofoliu</a></li>
-                    <li><a href="#courses">Cursuri</a></li>
-                    <li><a href="#contact">Contact</a></li>
+            <nav className={styles.navbar}>
+                {/* Logo */}
+                <div className={styles.logo}>Micropigmentare Pro</div>
+
+                {/* Hamburger Menu Button */}
+                <button className={styles.hamburger} onClick={toggleMenu}>
+                    ☰
+                </button>
+
+                {/* Navigation Menu */}
+                <ul className={`${styles.navList} ${menuOpen ? styles.navOpen : ""}`}>
+                    <li><a href="#home" onClick={closeMenu}>Acasă</a></li>
+                    <li><a href="#about" onClick={closeMenu}>Despre Noi</a></li>
+                    <li><a href="#services" onClick={closeMenu}>Servicii</a></li>
+                    <li><a href="#portfolio" onClick={closeMenu}>Portofoliu</a></li>
+                    <li><a href="#courses" onClick={closeMenu}>Cursuri</a></li>
+                    <li><a href="#contact" onClick={closeMenu}>Contact</a></li>
                 </ul>
             </nav>
         </header>
