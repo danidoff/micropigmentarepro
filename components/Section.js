@@ -6,7 +6,7 @@ import styles from '@/styles/Home.module.css';
 import SectionTitle from "@/components/SectionTitle";
 import {useEffect, useState} from "react";
 
-export default function Section({ id, title, content, listItems, backgroundColor, backgroundImage, image }) {
+export default function Section({ id, title, byTitle, content, listItems, backgroundColor, backgroundImage, image }) {
     // const { scrollY } = useScroll();
     // const y = useTransform(scrollY, [0, 500], [0, -200]);
 
@@ -32,7 +32,7 @@ export default function Section({ id, title, content, listItems, backgroundColor
                  style={{ backgroundImage: id === "home" && !isMobile ? `url(${image})` : "none" }}>
 
 
-            <SectionTitle title={title} id={id}/>
+            <SectionTitle title={title} id={id} byTitle={byTitle}/>
             <motion.div style={{y}} className={styles.contentContainer}>
                 <div className={styles.textContainer}>
                     {content && <p className={id === "home" ? styles.homeText : ""}>{content}</p>}

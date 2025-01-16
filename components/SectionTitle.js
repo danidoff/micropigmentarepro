@@ -3,11 +3,14 @@
 import styles from '@/styles/SectionTitle.module.css';
 import {motion} from "framer-motion";
 
-export default function SectionTitle({title, id}) {
-    return (
-        <motion.div className={styles.titleContainer}>
-            <h1 className={styles.title}>{title}</h1>
-            {id === 'home' ? <h2>by Cristina Lăcău</h2> : ""}
-        </motion.div>
+export default function SectionTitle({title, byTitle, id}) {    
+    return (id === 'home' ?
+            <motion.div className={styles.homeTitleContainer}>
+                <p className={styles.homeTitle}>{title}</p>
+                <p className={styles.homeSubtitle}>{byTitle}</p>
+            </motion.div> :
+            <motion.div className={styles.titleContainer}>
+                <h1 className={styles.title}>{title}</h1>
+            </motion.div>
     );
 }
