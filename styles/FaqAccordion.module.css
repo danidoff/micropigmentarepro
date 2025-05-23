@@ -1,0 +1,93 @@
+/* styles/FaqAccordion.module.css */
+
+.faqSection {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 42rem; /* max-w-2xl */
+  margin-left: auto; /* mx-auto */
+  margin-right: auto; /* mx-auto */
+  padding-top: 2rem; /* py-8 */
+  padding-bottom: 2rem; /* py-8 */
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  background-color: #000; /* bg-gray-800 - changed to black */
+}
+
+.title {
+  color: white;
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 700; /* font-bold */
+  text-align: center; /* text-center */
+  margin-bottom: 2rem; /* mb-8 */
+}
+
+.faqItem {
+  border-bottom-width: 1px; /* border-b */
+  border-bottom-color: #e5e7eb; /* border-gray-200 */
+  display: block;
+}
+
+.questionButton {
+  display: flex; /* flex */
+  justify-content: space-between; /* justify-between */
+  align-items: center; /* items-center */
+  width: 100%; /* w-full */
+  padding-top: 1rem; /* py-4 */
+  padding-bottom: 1rem; /* py-4 */
+  text-align: left; /* text-left */
+  font-weight: 600; /* font-semibold */
+  font-size: 1.125rem; /* text-lg */
+  outline: none; /* focus:outline-none */
+  color: #ffffff; /* text-white */
+  border-bottom-color: #374151; /* border-gray-700 */
+}
+
+.arrowIconBase {
+  width: 20px;
+  height: 20px;
+  transition-property: transform; /* transition-transform */
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* transform */
+  transition-duration: 150ms; /* transform */
+}
+
+.arrowIconRotate180 {
+  transform: rotate(180deg); /* rotate-180 */
+}
+
+.arrowIconRotate0 {
+ transform: rotate(0deg); /* rotate-0 */
+}
+
+.answerContainer {
+  overflow: hidden; /* overflow-hidden */
+  transition-property: max-height, opacity; /* transition-all */
+  transition-duration: 500ms; /* duration-500 */
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); /* ease-in-out */
+  color: #ffffff; /* text-white */
+}
+
+.answerContainerClosed {
+    max-height: 0; /* max-h-0 */
+    opacity: 0; /* opacity-0 */
+}
+
+.answerContainerOpen {
+    max-height: 500px; /* max-h-[500px] */
+    background-color: #000;
+    border: 1px solid #a0a0a0;
+    border-radius: 0.5rem;
+    opacity: 1; /* opacity-100 */
+}
+
+
+.answerTextPadding {
+  padding-bottom: 1rem; /* pb-4 */
+  color: #ffffff; /* text-white */
+}
+
+.answerItem {
+    color: #ffffff; /* Ensure answer text is white */
+}

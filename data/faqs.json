@@ -1,0 +1,39 @@
+[
+    {
+        "id": "faq",
+        "title": "Întrebări și Răspunsuri",
+        "listItems": [
+          {
+            "title": "Ce este micropigmentarea și cum mă ajută?",
+            "items": [
+              "Micropigmentarea este o tehnică semi-permanentă de tatuare a sprâncenelor, buzelor sau conturului ochilor, care oferă un aspect natural și îmbunătățit. La Belle Studio folosim pigmenți de înaltă calitate și tehnici moderne pentru rezultate durabile și armonioase."
+            ]
+          },
+          {
+            "title": "Cât durează o sesiune de laminare gene și sprâncene?",
+            "items": [
+              "O sesiune de laminare durează aproximativ 60-90 de minute și include pregătirea, aplicarea soluțiilor și finisajul personalizat."
+            ]
+          },
+          {
+            "title": "Cum mă pot programa și ce trebuie să știu înainte?",
+            "items": [
+              "Ne poți suna la 0747 662 436 sau ne poți vizita direct la studio. Pentru microblading și pigmentări, evită cafeaua și alcoolul cu 24h înainte și informează-ne despre orice alergii."
+            ]
+          },
+          {
+            "title": "Ce include cursul de micropigmentare?",
+            "items": [
+              "Cursul include partea teoretică, exerciții practice pe latex și modele reale, kit cu instrumente și mentorat post-curs pentru perfecționare."
+            ]
+          },
+          {
+            "title": "Care este durata de viață a pigmentului aplicat?",
+            "items": [
+              "Durata pigmentului variază între 12 și 18 luni, în funcție de tipul de piele și îngrijirea post-tratament. Recomandăm o retușare anuală pentru a menține intensitatea și forma perfectă."
+            ]
+          }
+        ],
+        "backgroundColor": "#ff9a9e"
+    }
+]

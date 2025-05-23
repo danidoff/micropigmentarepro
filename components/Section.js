@@ -1,20 +1,13 @@
 "use client";
-
-import {motion, useScroll, useSpring, useTransform} from "framer-motion";
 import Image from "next/image";
 import styles from '@/styles/Home.module.css';
 import SectionTitle from "@/components/SectionTitle";
-import {useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 
+
+    
+    
 export default function Section({ id, title, byTitle, content, listItems, backgroundColor, backgroundImage, image }) {
-    // const { scrollY } = useScroll();
-    // const y = useTransform(scrollY, [0, 500], [0, -200]);
-
-    const { scrollYProgress } = useScroll();
-    const smoothScroll = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
-
-    const y = useTransform(smoothScroll, [0, 1], ["0%", "2%"]); // Efect de paralax ușor
-
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
@@ -32,8 +25,8 @@ export default function Section({ id, title, byTitle, content, listItems, backgr
                  style={{ backgroundImage: id === "home" && !isMobile ? `url(${image})` : "none" }}>
 
 
-            <SectionTitle title={title} id={id} byTitle={byTitle}/>
-            <motion.div style={{y}} className={styles.contentContainer}>
+            <SectionTitle title={title} id={id} byTitle={byTitle}/> {/* SectionTitle might still use framer-motion, will address separately */}
+            <div className={styles.contentContainer}>
                 <div className={styles.textContainer}>
                     {content && <p className={id === "home" ? styles.homeText : ""}>{content}</p>}
 
@@ -61,7 +54,7 @@ export default function Section({ id, title, byTitle, content, listItems, backgr
                         <Image src={image} alt={title} width={600} height={400} priority/>
                     </div>
                 )}
-            </motion.div>
+            </div>
         </section>
     );
 }
