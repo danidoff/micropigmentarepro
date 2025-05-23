@@ -93,3 +93,10 @@
         opacity: 1; /* Show the menu */
     }
 }
+
+/* Prevent hamburger menu clicks on desktop */
+@media (min-width: 901px) {
+    .hamburger {
+        pointer-events: none;
+    }
+}

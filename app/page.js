@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Section from '@/components/Section';
 import SectionTitle from '@/components/SectionTitle';
+import FaqAccordion from '@/components/FaqAccordion';
 import sectionsData from '@/data/sections.json';
 import Footer from '@/components/Footer';
 import styles from '@/styles/Home.module.css';
@@ -12,7 +13,11 @@ export default function Home() {
 
             {/* Loop through JSON data to render sections dynamically */}
             {sectionsData.map((section) => (
-                <Section key={section.id} {...section} />
+                section.id === 'faq' ? (
+                    <FaqAccordion key={section.id} {...section} />
+                ) : (
+                    <Section key={section.id} {...section} />
+                )
             ))}
              <Footer />
         </div>

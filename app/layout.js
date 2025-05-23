@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
         <html lang="ro" className={`${workSans.className}`}>
         <head>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <meta charset="UTF-8"/>
+            <meta charSet="UTF-8"/>
             <meta property="og:title" content={metadata.title}/>
             <meta property="og:description" content={metadata.description}/>
             <meta property="og:image" content="https://micropigmentarepro.vercel.app/images/home.jpg/images/home.jpg"/>

@@ -12,13 +12,13 @@
 }
 
 .section {
-    /*margin-top: 50px;*/
+    margin-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     color: white;
-    padding: 35px 20px;
+    padding: 35px 20px 20px;
     min-height: 100vh;
     scroll-snap-align: start;
 }
@@ -234,5 +234,11 @@
 @media (max-width: 900px) {
     .section {
         min-height: 100vh;
+    }
+}
+
+@media (min-width: 901px) {
+    .section {
+        min-height: auto;
     }
 }

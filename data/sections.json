@@ -93,6 +93,9 @@
     "image": "/images/courses.jpg"
   },
   {
+    "id": "faq"
+  },
+  {
     "id": "contact",
     "title": "Contact",
     "listItems": [
